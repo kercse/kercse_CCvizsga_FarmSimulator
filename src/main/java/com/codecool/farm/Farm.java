@@ -16,9 +16,9 @@ class Farm {
 
         List<String> animalStatus = new ArrayList<>();
 
-        for (int i = 0; i < animalList.size(); i++) {
-            animalStatus.add("There is a " + animalList.get(i).getSize() + " sized "
-                    + animalList.get(i).getSpecies(animalList.get(i)) + "in the farm.");
+        for (Animal animal : animalList) {
+            String status = "There is a " + animal.getSize() + " sized " + animal.getClass().getSimpleName().toLowerCase() + " in the farm.";
+            animalStatus.add(status);
         }
         return animalStatus;
     }
